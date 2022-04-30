@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const CustomButton = ({ text, className }) => {
+const CustomButton = ({ text, className, onClick }) => {
   const chooseButtonColor = (className) => {
     if (className === "button__yellow") {
       return "button__yellow button";
@@ -14,7 +14,11 @@ const CustomButton = ({ text, className }) => {
     return "default button";
   };
 
-  return <button className={chooseButtonColor(className)}>{text}</button>;
+  return (
+    <button onClick={onClick} className={chooseButtonColor(className)}>
+      {text}
+    </button>
+  );
 };
 
 export default CustomButton;

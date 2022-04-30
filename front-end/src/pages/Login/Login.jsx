@@ -3,6 +3,7 @@ import logo from "../../assets/logo.svg";
 import styles from "./style.module.css";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import Container from "../../components/Container/Container";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -10,14 +11,18 @@ const Login = () => {
       <section className={styles.login}>
         <img src={logo} alt="No Plastic Logo" />
         <div className={styles.login__buttons}>
-          <CustomButton
-            text="Entrar na minha conta"
-            className="button__yellow"
-          />
-          <CustomButton
-            className="button__green"
-            text="Criar conta NO PLASTIC"
-          />
+          <Link to="/signup">
+            <CustomButton
+              text="Entrar na minha conta"
+              className="button__yellow"
+            />
+          </Link>
+          <Link to="/register">
+            <CustomButton
+              className="button__green"
+              text="Criar conta NO PLASTIC"
+            />
+          </Link>
         </div>
       </section>
     </Container>

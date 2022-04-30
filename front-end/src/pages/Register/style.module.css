@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 .back a {
@@ -16,7 +16,12 @@
 }
 
 .container__register__section {
-  margin-left: -5rem;
+  margin-left: -3rem;
+}
+
+.container__register__section button {
+  margin-left: 4rem;
+  margin-top: 1rem;
 }
 
 .container__register__title p {
@@ -53,6 +58,11 @@
   width: 11rem;
 
   font-size: larger;
+}
+
+.container__input__helper img {
+  margin-left: 0.6rem;
+  width: 0.6rem;
 }
 
 .container__input__last {
