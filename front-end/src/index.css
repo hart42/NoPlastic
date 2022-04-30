@@ -1,13 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #21C7D9;
+  background-color: #21c7d9;
   box-sizing: border-box;
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  all: unset;
 }
