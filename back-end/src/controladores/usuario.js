@@ -1,4 +1,5 @@
 const knex = require('../bancoDeDado/conexao');
+const bcrypt = require('bcrypt');
 
 const getUsuario = async (req, res) => {
   try {
@@ -31,12 +32,14 @@ const cadastrarUsuario = async (req, res) => {
       return res.status(401).json("Email ja cadastrado");
     }
 
+    const senhaCriptografada = await bcrypt.hash(senha, 10);
+
     const usuario = await knex('usuarios').insert({
       nome,
       email,
       telefone,
       cep,
-      senha
+      senha: senhaCriptografada
     }).returning("*");
 
     if (!usuario) {
@@ -48,9 +51,29 @@ const cadastrarUsuario = async (req, res) => {
   } catch (error) {
     return res.status(400).json(error.message);
   }
+};
+
+const obterPerfilUsuario = async (req, res) => {
+  const id = req.usuarioId;
+
+  try {
+    const usuario = await knex('usuarios').where({ id }).first();
+
+    if (!usuario) {
+      return res.status(404).json('Usuario não encontrado');
+    }
+
+    const { senha: _, ...dadosUsuario} = usuario;
+
+    return res.status(200).json(dadosUsuario);
+
+  } catch (error) {
+    return res.status(400).json(error.message); 
+  }
 }
 
 module.exports = {
   getUsuario,
   cadastrarUsuario,
+  obterPerfilUsuario,
 };
