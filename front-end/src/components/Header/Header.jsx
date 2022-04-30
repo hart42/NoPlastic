@@ -4,9 +4,11 @@ import imgPerfil from "../../assets/perfil.png";
 
 const Header = () => {
   return (
-    <header className={styles.header__container}>
-      <h1>Olá, Maria</h1>
-      <img src={imgPerfil} alt="" />
+    <header className={styles.header}>
+      <div className={styles.header__itens}>
+        <h1>Olá, Maria</h1>
+        <img src={imgPerfil} alt="" />
+      </div>
     </header>
   );
 };
