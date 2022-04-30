@@ -4,48 +4,48 @@
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "content sidebar "
+  grid-template-areas: "content sidebar ";
 }
 
 .sidebar {
-    margin-bottom: 100vh;
-    display: flex;
-    justify-content: top;
-    align-items: right;
-    grid-area: sidebar;
-  }
+  margin-bottom: 100vh;
+  display: flex;
+  justify-content: top;
+  align-items: right;
+  grid-area: sidebar;
+}
 .content {
-    margin-bottom: 10vh;
-    padding-left: 38vh;
-    font-size: 10px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10vh;
-  }
+  margin-bottom: 10vh;
+  padding-left: 38vh;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10vh;
+}
 .form-group {
-    margin-bottom: 4vh;
-    margin-top: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    flex-direction: column;
-  }
+  margin-bottom: 4vh;
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  flex-direction: column;
+}
 .form-group input {
-    margin-bottom: 2vh;
-    margin-top: 2vh;
-    width: 40vh;
-    height: 5vh;
-    border-radius: 5px;
-    border-bottom: 1px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: transparent;
-  }
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  width: 40vh;
+  height: 5vh;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
 .login__buttons {
-    margin-bottom: -58vh;
-    margin-top: 2vh;
-    font-size: 15px;
-    grid-area: "button";
-  }
+  margin-bottom: -58vh;
+  margin-top: 2vh;
+  font-size: 15px;
+  grid-area: "button";
+}

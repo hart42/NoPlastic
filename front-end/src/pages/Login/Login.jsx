@@ -1,20 +1,27 @@
-import React from 'react'
-import logo from '../../assets/logo.svg'
-import './style.css'
-import CustomButton from '../../components/CustomButton/CustomButton'
+import React from "react";
+import logo from "../../assets/logo.svg";
+import styles from "./style.module.css";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import Container from "../../components/Container/Container";
 
 const Login = () => {
   return (
-    <div className='container'>
-      <section className='login'>
+    <Container>
+      <section className={styles.login}>
         <img src={logo} alt="No Plastic Logo" />
-        <div className='login__buttons'>
-          <CustomButton text='Cadastrar'/>  
-          <CustomButton text='Login' className='yellow'/>  
+        <div className={styles.login__buttons}>
+          <CustomButton
+            text="Entrar na minha conta"
+            className="button__yellow"
+          />
+          <CustomButton
+            className="button__green"
+            text="Criar conta NO PLASTIC"
+          />
         </div>
       </section>
-    </div>
-  )
-}
+    </Container>
+  );
+};
 
-export default Login
+export default Login;

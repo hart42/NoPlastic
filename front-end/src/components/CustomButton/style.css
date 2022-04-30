@@ -1,20 +1,32 @@
 .button {
   all: unset;
-  border-radius: 0.5rem;
   cursor: pointer;
+  border-radius: 3.2rem;
   font-size: 1rem;
-  width: 7rem;
-  height: 3rem;
+
+  line-height: 1.6rem;
+
+  font-weight: bold;
+  width: 13rem;
+  height: 2.4rem;
   text-align: center;
   margin-right: 0.6rem;
+
+  margin-bottom: 1rem;
 }
 
-.button__yellow{
-  background-color: #FDD450;
+.button__yellow {
+  background-color: #fdd450;
   color: #000;
 }
 
-.button__green{
-  background-color: #0C6777;
+.button__green {
+  background-color: #0c6777;
   color: #fff;
+}
+
+.default {
+  width: 10rem;
+  background: #fdd450;
+  border-radius: 5px;
 }
