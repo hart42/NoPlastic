@@ -1,0 +1,69 @@
+.container__register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.back a {
+  all: unset;
+  color: black;
+  text-decoration: underline;
+  font-size: 0.8rem;
+
+  margin-left: 15rem;
+}
+
+.container__register__section {
+  margin-left: -5rem;
+}
+
+.container__register__title p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.container__input {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 2rem;
+}
+
+.container__input label {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+
+  margin-bottom: 0.1rem;
+}
+
+.container__input input:focus {
+  border-bottom: 1px solid red;
+}
+
+.container__input input {
+  all: unset;
+  border-bottom: 1px solid black;
+  width: 11rem;
+
+  font-size: larger;
+}
+
+.container__input__last {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+
+  margin-bottom: 0.1rem;
+}
+
+.container__input__last span {
+  margin-left: 0.4rem;
+  font-size: 0.6rem;
+}
