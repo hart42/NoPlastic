@@ -3,6 +3,7 @@ import Signup from "./pages/Signup/Signup";
 import Register from "./pages/Register/Register";
 import Home from "./pages/Home/Home";
 import Scanner from "./pages/Scanner/Scanner";
+import Confirm from "./pages/Confirm/Confirm";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/home" element={<Home />} />
         <Route path="/scanner" element={<Scanner />} />
+        <Route path="/confirm-scanner" element={<Confirm />} />
       </Routes>
     </BrowserRouter>
   );

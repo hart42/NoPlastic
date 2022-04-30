@@ -13,7 +13,9 @@ const Scanner = () => {
       <Header />
       <div className={styles.scanner}>
         <img src={qrCode} alt="" />
-        <CustomButton text="Confirmar" />
+        <Link to="/confirm-scanner">
+          <CustomButton text="Confirmar" />
+        </Link>
         <Link to="/home">Voltar</Link>
       </div>
       <Footer />
