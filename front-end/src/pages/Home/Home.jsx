@@ -9,6 +9,7 @@ import cardImg from "../../assets/card.svg";
 import heartImg from "../../assets/heart.svg";
 import bagImg from "../../assets/bag.svg";
 import moneyImg from "../../assets/money.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -22,7 +23,9 @@ const Home = () => {
           <HomeButtons text="Loja" image={bagImg} />
           <HomeButtons text="Mercados Parceiros" image={heartImg} />
           <HomeButtons text="Promoções" image={cardImg} />
-          <HomeButtons text="Escanear QR Code" type="button__yellow" />
+          <Link to="/scanner">
+            <HomeButtons text="Escanear QR Code" type="button__yellow" />
+          </Link>
         </div>
         <HomeBanner />
       </div>
