@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomButton from '../../components/CustomButton/CustomButton'
 import './style.css'
+import Container from "../../components/Container/Container";
 
 function backPage() {
   window.history.back()
@@ -8,9 +9,10 @@ function backPage() {
 
 export default function Signup() {
     return (
+        <Container>
         <div className='container'>
             <div className='sidebar'>
-                <h1 onClick={() => backPage}>Voltar</h1>
+                <button onClick={() => backPage}>Voltar</button>
             </div>
             <div className='content'>
                 <h1>Entrar na minha conta</h1>
@@ -29,5 +31,6 @@ export default function Signup() {
                 <CustomButton text='Entrar'  className='yellow'></CustomButton>
             </div>
         </div>
+        </Container>
     )
     }
