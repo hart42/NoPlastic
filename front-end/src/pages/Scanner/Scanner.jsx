@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Scanner = () => {
   return (
     <Container color="default">
-      <Header />
+      <Header balance="Meu saldo é R$0" />
       <div className={styles.scanner}>
         <img src={qrCode} alt="" />
         <Link to="/confirm-scanner">

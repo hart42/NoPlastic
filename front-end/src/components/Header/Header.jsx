@@ -2,11 +2,14 @@ import React from "react";
 import styles from "./style.module.css";
 import imgPerfil from "../../assets/perfil.png";
 
-const Header = () => {
+const Header = ({ balance }) => {
   return (
     <header className={styles.header}>
       <div className={styles.header__itens}>
-        <h1>Olá, Maria</h1>
+        <div>
+          <h1>Olá, Maria</h1>
+          <span>{balance}</span>
+        </div>
         <img src={imgPerfil} alt="" />
       </div>
     </header>

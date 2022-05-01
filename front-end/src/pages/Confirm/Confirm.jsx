@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Confirm = () => {
   return (
     <Container color="default">
-      <Header />
+      <Header balance="Meu saldo é R$0" />
       <div className={styles.confirm}>
         <header>
           <h1>Parabéns!</h1>
