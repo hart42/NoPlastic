@@ -70,10 +70,36 @@ const obterPerfilUsuario = async (req, res) => {
   } catch (error) {
     return res.status(400).json(error.message); 
   }
+};
+
+const editarCarteira = async (req, res) => {
+  let { carteira } = req.body;
+  const id = req.usuarioId;
+
+  try {
+    const usuario = await knex('usuarios').where({ id }).first();
+
+    if(!usuario) {
+      return res.status(404).json('Usuario não encontrado!');
+    }
+
+    const atualizarCarteira = await knex('usuarios').where({ id }).update({
+      carteira
+    }).returning("carteira");
+
+    if (!atualizarCarteira) {
+      return res.status(400).json('A carteira não foi atualizada');
+    }
+
+    return res.status(200).json(atualizarCarteira);
+  } catch (error) {
+    return res.status(400).json(error.message);
+  }
 }
 
 module.exports = {
   getUsuario,
   cadastrarUsuario,
   obterPerfilUsuario,
+  editarCarteira,
 };
